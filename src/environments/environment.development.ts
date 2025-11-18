@@ -1,5 +1,5 @@
 export const environment = {
-    production: true,
+    production: false,
     APIURL: 'http://localhost:3000/',
-    GITHUB_CLIENT_ID: 'Ov23lipjwVrdsoE0a210'
+    GITHUB_CLIENT_ID:'Ov23lipjwVrdsoE0a210'
 };
