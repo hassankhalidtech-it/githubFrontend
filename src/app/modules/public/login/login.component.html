@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="login-box">
+    <h2>GitHub Integration</h2>
+    <p>Connect your GitHub account to continue.</p>
+
+    <button (click)="login()" class="github-btn" [disabled]="connection === 'connecting' || connection === 'connected'">
+      <i class="fab fa-github"></i>
+      <span *ngIf="connection === 'idle' || connection === 'failed'">Login with GitHub</span>
+      <span *ngIf="connection === 'connecting'">Connecting...</span>
+      <span *ngIf="connection === 'connected'">Connected ✓</span>
+    </button>
+
+    <div *ngIf="message" class="message mt-3">
+      <p>{{ message }}</p>
+    </div>
+  </div>
+</div>

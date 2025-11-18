@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="callback-box">
+    <div *ngIf="!message" class="loader"></div>
+    <h3 *ngIf="!message">Connecting to GitHub...</h3>
+    <div *ngIf="message">
+      <i class="fas fa-check-circle success-icon" *ngIf="isSuccess"></i>
+      <i class="fas fa-times-circle error-icon" *ngIf="!isSuccess"></i>
+      <p>{{ message }}</p>
+      <button (click)="navigateToHome()" *ngIf="isSuccess" class="home-btn">Go to Home</button>
+    </div>
+  </div>
+</div>
